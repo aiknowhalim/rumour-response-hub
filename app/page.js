@@ -1,66 +1,17 @@
 'use client';
 
+import { useState } from 'react';
 import content from '../content/site.json';
 
 export default function Page() {
-  return (
-    <main className="app-shell">
-      <style>{`
-        *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:#f5f6fa;color:#172033;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.app-shell{min-height:100vh}.topbar{position:sticky;top:0;z-index:20;height:72px;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid #e7e9f1;display:flex;align-items:center;justify-content:space-between;padding:0 5vw}.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:-.02em}.logo{width:38px;height:38px;border-radius:12px;background:#191c2b;color:white;display:grid;place-items:center;font-size:17px}.status{display:flex;gap:8px;align-items:center;color:#667085;font-size:13px}.dot{width:8px;height:8px;background:#2a9d72;border-radius:50%}.hero{padding:72px 5vw 38px;max-width:1400px;margin:auto}.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:800;color:#6d5ef6}.hero h1{font-size:clamp(42px,6vw,78px);line-height:.98;letter-spacing:-.055em;margin:16px 0 22px;max-width:850px}.hero p{font-size:19px;line-height:1.7;color:#667085;max-width:760px;margin:0}.quick-grid{max-width:1400px;margin:0 auto;padding:0 5vw 58px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.quick{background:white;border:1px solid #e6e8ef;border-radius:18px;padding:20px;text-decoration:none;color:#172033;box-shadow:0 8px 30px rgba(25,28,43,.04);transition:.2s}.quick:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(25,28,43,.08)}.quick small{display:block;color:#8b92a5;margin-bottom:7px}.quick strong{font-size:16px}.section{max-width:1400px;margin:auto;padding:20px 5vw 74px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:22px}.section-head h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.04em;margin:7px 0 0}.summary{max-width:610px;color:#667085;line-height:1.65}.module-grid{display:grid;grid-template-columns:1.55fr .85fr;gap:18px}.theory-stack{display:grid;gap:14px}.card{background:white;border:1px solid #e5e7ee;border-radius:22px;padding:25px;box-shadow:0 8px 30px rgba(25,28,43,.035)}.card h3{font-size:18px;margin:0 0 11px;letter-spacing:-.015em}.card p{color:#667085;line-height:1.62;margin:0}.use{margin-top:15px!important;padding-top:15px;border-top:1px solid #eef0f4;color:#343b4d!important}.use b{color:#172033}.checklist{border-radius:22px;padding:26px;color:white;position:sticky;top:92px;align-self:start}.checklist h3{margin:0 0 18px;font-size:20px}.checklist ol{margin:0;padding-left:22px}.checklist li{padding:9px 0;line-height:1.5;color:rgba(255,255,255,.9)}.principles{background:#191c2b;color:white;padding:72px 5vw}.principles-inner{max-width:1400px;margin:auto}.principles h2{font-size:40px;letter-spacing:-.04em;margin:0 0 28px}.principle-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.principle{border:1px solid #35394b;border-radius:18px;padding:22px}.principle h3{margin:0 0 10px}.principle p{color:#b9becc;line-height:1.6;margin:0;font-size:14px}.footer{padding:30px 5vw;text-align:center;color:#858b9c;font-size:13px;background:#191c2b;border-top:1px solid #303447}@media(max-width:850px){.quick-grid,.principle-grid{grid-template-columns:1fr}.module-grid{grid-template-columns:1fr}.section-head{display:block}.checklist{position:static}.hero{padding-top:48px}.topbar{padding:0 20px}.hero,.quick-grid,.section{padding-left:20px;padding-right:20px}.status span:last-child{display:none}}
-      `}</style>
-
-      <header className="topbar">
-        <div className="brand"><span className="logo">RR</span> Rumour Response Hub</div>
-        <div className="status"><span className="dot"/><span>Learning mode</span></div>
-      </header>
-
-      <section className="hero">
-        <div className="kicker">Incident communication & human behaviour</div>
-        <h1>{content.title}</h1>
-        <p>{content.tagline}</p>
-      </section>
-
-      <nav className="quick-grid" aria-label="Quick actions">
-        {content.quickActions.map((item, i) => (
-          <a className="quick" href={`#${item.target}`} key={item.target}>
-            <small>0{i + 1} · Open module</small><strong>{item.label} →</strong>
-          </a>
-        ))}
-      </nav>
-
-      {content.modules.map(module => (
-        <section className="section" id={module.id} key={module.id}>
-          <div className="section-head">
-            <div><div className="kicker" style={{color:module.accent}}>{module.eyebrow}</div><h2>{module.heading}</h2></div>
-            <p className="summary">{module.summary}</p>
-          </div>
-          <div className="module-grid">
-            <div className="theory-stack">
-              {module.theories.map(theory => (
-                <article className="card" key={theory.name}>
-                  <h3>{theory.name}</h3>
-                  <p>{theory.idea}</p>
-                  <p className="use"><b>Operational takeaway:</b> {theory.use}</p>
-                </article>
-              ))}
-            </div>
-            <aside className="checklist" style={{background:module.accent}}>
-              <h3>Response checklist</h3>
-              <ol>{module.checklist.map(item => <li key={item}>{item}</li>)}</ol>
-            </aside>
-          </div>
-        </section>
-      ))}
-
-      <section className="principles">
-        <div className="principles-inner">
-          <div className="kicker">Across every module</div><h2>Four operating principles</h2>
-          <div className="principle-grid">
-            {content.principles.map(item => <article className="principle" key={item.title}><h3>{item.title}</h3><p>{item.text}</p></article>)}
-          </div>
-        </div>
-      </section>
-      <footer className="footer">{content.footer}</footer>
-    </main>
-  );
+  const [open, setOpen] = useState({});
+  return <main className="deck">
+    <style>{`*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#07111d;color:#edf2f7;font-family:Inter,system-ui,sans-serif}.deck{min-height:100vh}.bar{position:sticky;top:0;z-index:20;height:68px;background:#07111df2;border-bottom:1px solid #29384b;backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:space-between;padding:0 5vw}.brand{font-weight:850;letter-spacing:.08em;font-size:13px}.badge{border:1px solid #42536b;border-radius:999px;padding:7px 11px;color:#9fb0c5;font-size:11px}.hero,.slide{min-height:92vh;padding:8vh 6vw;display:flex;flex-direction:column;justify-content:center}.hero{background:radial-gradient(circle at 82% 20%,#1d3551,transparent 30%)}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-weight:800;font-size:11px;color:#8fa4bd}.hero h1,.slide h2{font-size:clamp(48px,7vw,92px);line-height:.94;letter-spacing:-.055em;margin:18px 0}.lead{max-width:900px;font-size:21px;line-height:1.6;color:#b7c4d4}.objectives{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:42px}.obj{border:1px solid #304158;border-radius:14px;padding:18px;color:#b6c2d2;font-size:13px;line-height:1.55}.obj b{display:block;color:#fff;font-size:23px;margin-bottom:12px}.toc{padding:60px 6vw;background:#0b1725}.tocgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.toc a{color:white;text-decoration:none;border:1px solid #304158;border-radius:16px;padding:22px}.toc small{color:#8296af}.toc strong{display:block;margin-top:10px;font-size:19px}.slide{background:#f3f5f7;color:#121a27;border-bottom:1px solid #d9dee5}.modulehead{display:grid;grid-template-columns:180px 1fr;gap:32px;align-items:end}.num{font-size:120px;line-height:.8;font-weight:900;opacity:.18}.subtitle{font-size:20px;color:#667085;max-width:820px;line-height:1.5}.why{margin:30px 0 16px;padding:20px 24px;background:#fff;border-left:5px solid;border-radius:0 14px 14px 0;color:#475467;line-height:1.7}.why b{color:#101828}.theories{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.theory{background:white;border:1px solid #dde2e8;border-radius:16px;padding:23px}.theory h3{margin:0 0 12px;font-size:18px}.theory p{color:#667085;line-height:1.6;font-size:14px}.theory .academic{color:#344054}.theory .apply{border-top:1px solid #eaecf0;padding-top:13px}.ops{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.dark{background:#0d1928;color:#eaf0f7;border-radius:17px;padding:24px}.dark h3{margin-top:0}.dark li{color:#b7c4d4;padding:7px 0;line-height:1.5}.dark p{color:#b7c4d4;line-height:1.65}.reveal{background:transparent;color:white;border:1px solid #65758b;padding:10px 13px;border-radius:9px;font-weight:750;cursor:pointer}.answer{background:#17283c;padding:14px;border-radius:10px}.synthesis{padding:90px 6vw;background:#08131f}.synthesis h2{font-size:clamp(40px,6vw,72px);letter-spacing:-.05em}.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.step{border:1px solid #304158;border-radius:15px;padding:20px}.step b{font-size:36px;color:#637890}.step p{color:#9eafc3;font-size:13px;line-height:1.55}.critical{margin-top:45px;border-top:1px solid #304158;padding-top:30px}.critical h3{font-size:26px}.critical p{max-width:1000px;color:#aab9ca;line-height:1.7}.footer{padding:28px 6vw;color:#778aa1;font-size:12px;background:#08131f;border-top:1px solid #26364a}@media(max-width:900px){.objectives,.tocgrid,.theories,.ops,.steps{grid-template-columns:1fr}.modulehead{grid-template-columns:1fr}.num{font-size:75px}.hero,.slide{padding:70px 22px}.bar{padding:0 22px}.badge{display:none}}`}</style>
+    <header className="bar"><div className="brand">POLICE STUDIES · OPERATIONAL PSYCHOLOGY</div><div className="badge">UNIVERSITY-LEVEL TEACHING DECK</div></header>
+    <section className="hero"><div className="eyebrow">Evidence · theory · critique · application</div><h1>{content.title}</h1><p className="lead">{content.tagline} This deck treats operational psychology as an analytical discipline: officers are asked not only what works, but why a model predicts an outcome, what evidence supports it, where its explanatory limits lie, and how police action itself can alter the social system being managed.</p><div className="objectives">{content.objectives.map((x,i)=><div className="obj" key={x}><b>0{i+1}</b>{x}</div>)}</div></section>
+    <section className="toc"><div className="eyebrow">Lecture architecture</div><div className="tocgrid">{content.modules.map(m=><a href={`#${m.id}`} key={m.id}><small>MODULE {m.number}</small><strong>{m.heading}</strong></a>)}</div></section>
+    {content.modules.map(m=><section className="slide" id={m.id} key={m.id}><div className="modulehead"><div className="num" style={{color:m.accent}}>{m.number}</div><div><div className="eyebrow">Conceptual framework</div><h2>{m.heading}</h2><p className="subtitle">{m.subtitle}</p></div></div><div className="why" style={{borderColor:m.accent}}><b>Operational problem statement.</b> {m.whyItMatters}</div><div className="theories">{m.theories.map((t,i)=><article className="theory" key={t.name}><div className="eyebrow">Theory {m.number}.{i+1}</div><h3>{t.name}</h3><p className="academic"><b>Proposition:</b> {t.idea}</p><p><b>Interpretive significance:</b> {t.policeMeaning}</p><p className="apply"><b>Translation to practice:</b> {t.application}</p></article>)}</div><div className="ops"><div className="dark"><div className="eyebrow">Analytical questions</div><h3>Decision architecture</h3><ol>{m.decisionPoints.map(x=><li key={x}>{x}</li>)}</ol></div><div className="dark"><div className="eyebrow">Problem-based learning</div><h3>{m.scenario.title}</h3><p>{m.scenario.text}</p><p><b>{m.scenario.prompt}</b></p><button className="reveal" onClick={()=>setOpen(o=>({...o,[m.id]:!o[m.id]}))}>{open[m.id]?'Hide':'Reveal'} analytical response</button>{open[m.id]&&<p className="answer">{m.scenario.response} Critically assess this response against necessity, proportionality, procedural fairness, likely identity effects, information quality, and foreseeable unintended consequences.</p>}</div></div></section>)}
+    <section className="synthesis"><div className="eyebrow">From descriptive theory to professional judgement</div><h2>Operational analysis is iterative, not mechanical.</h2><div className="steps">{content.commandModel.map(c=><article className="step" key={c.step}><b>{c.step}</b><h3>{c.title}</h3><p>{c.text}</p></article>)}</div><div className="critical"><h3>Critical evaluation standard</h3><p>For university-level analysis, avoid treating any framework as a universal law. Ask what population and context produced the evidence; whether the model explains correlation, mechanism or causation; whether rival explanations fit the same observations; how institutional legitimacy and police tactics become independent variables; and whether an intervention that produces immediate compliance may create longer-term costs in trust, collective identity, intelligence flow or future cooperation.</p><p>Classical crowd concepts such as contagion, anonymity and deindividuation should therefore be studied historically and critically alongside contemporary social-identity approaches. Likewise, Psychological First Aid is best understood as an evidence-informed practice framework rather than a claim that one brief intervention prevents later psychopathology.</p></div></section>
+    <footer className="footer">{content.footer}</footer>
+  </main>;
 }
