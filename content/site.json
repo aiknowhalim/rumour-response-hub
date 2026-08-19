@@ -1,21 +1,111 @@
 {
-  "title": "rumour-response-hub",
-  "tagline": "Welcome — this is your new site, ready to be filled with your story.",
-  "sections": [
+  "title": "Rumour Response Hub",
+  "tagline": "Practical theory for managing misinformation, crowd dynamics, and psychological distress during high-pressure incidents.",
+  "quickActions": [
+    { "label": "Verify a rumour", "target": "rumour-management" },
+    { "label": "Assess crowd dynamics", "target": "crowd-control" },
+    { "label": "Use PFA", "target": "psychological-first-aid" }
+  ],
+  "modules": [
     {
-      "heading": "About",
-      "body": "Tell visitors who you are and what you do. Write as many paragraphs as you like — leave a blank line between them and each becomes its own paragraph.\n\nThis starter text is here so the page looks like a real site from the first minute. Replace it with your own words.",
-      "items": []
+      "id": "rumour-management",
+      "eyebrow": "Module 01",
+      "heading": "Rumour Management",
+      "summary": "Rumours grow when information matters to people but reliable facts are missing, delayed, confusing, or distrusted.",
+      "accent": "#6D5EF6",
+      "theories": [
+        {
+          "name": "Allport & Postman — Basic Law of Rumour",
+          "idea": "Rumour intensity tends to increase when both importance and ambiguity are high: R ≈ i × a.",
+          "use": "Reduce ambiguity quickly with verified facts, clear timestamps, and explicit statements about what is still unknown."
+        },
+        {
+          "name": "Information Vacuum",
+          "idea": "When official information is absent, people fill the gap with peer accounts, assumptions, and emotionally compelling explanations.",
+          "use": "Communicate early, even when the update is simply what is known, unknown, and being checked."
+        },
+        {
+          "name": "Inoculation Theory",
+          "idea": "People can become more resistant to misleading claims when warned about likely manipulation techniques before exposure.",
+          "use": "Pre-bunk common false narratives and explain the tactic, not just the specific false claim."
+        }
+      ],
+      "checklist": [
+        "Capture the exact claim before responding.",
+        "Separate verified facts, plausible but unverified information, and false information.",
+        "Identify the trusted source best placed to clarify the issue.",
+        "Publish a short correction with evidence and a timestamp.",
+        "Monitor whether the rumour changes form after the correction."
+      ]
     },
     {
-      "heading": "What you'll find here",
-      "body": "Use sections like this one to introduce your services, your work, or anything you want to highlight.",
-      "items": [
-        "Add a bullet list by filling the \"items\" array",
-        "Add more sections by adding objects to \"sections\"",
-        "Remove a field you don't need — the page adapts"
+      "id": "crowd-control",
+      "eyebrow": "Module 02",
+      "heading": "Crowd Control & Crowd Psychology",
+      "summary": "Crowds are not automatically irrational. Behaviour is strongly shaped by shared identity, perceived legitimacy, communication, environmental stress, and interactions with authorities.",
+      "accent": "#E58B3C",
+      "theories": [
+        {
+          "name": "Elaborated Social Identity Model (ESIM)",
+          "idea": "Crowd behaviour can change when people come to see themselves as sharing a common identity, especially after experiences viewed as indiscriminate or illegitimate.",
+          "use": "Use differentiated, proportionate responses and communicate why restrictions or directions are necessary."
+        },
+        {
+          "name": "Emergent Norm Theory",
+          "idea": "In unfamiliar situations, crowds may develop new local norms by observing influential behaviour and interpreting what others appear to accept.",
+          "use": "Make safe behaviour visible, easy, and socially reinforced through stewards, signage, and consistent instructions."
+        },
+        {
+          "name": "Deindividuation — Historical Perspective",
+          "idea": "Older theories proposed that anonymity in crowds reduces self-awareness and restraint. Modern research treats this as incomplete and highly context-dependent.",
+          "use": "Do not assume a crowd is inherently dangerous. Assess actual behaviour, identities, pressures, and triggers."
+        }
+      ],
+      "checklist": [
+        "Observe density, movement, bottlenecks, heat, noise, and visible distress.",
+        "Distinguish peaceful participants from individuals creating immediate risk.",
+        "Use clear instructions, reasons, routes, and realistic timeframes.",
+        "Preserve safe exits and avoid creating unnecessary compression points.",
+        "Escalate interventions only when necessary, proportionate, and lawful."
+      ]
+    },
+    {
+      "id": "psychological-first-aid",
+      "eyebrow": "Module 03",
+      "heading": "Psychological First Aid",
+      "summary": "PFA is humane, practical support for people affected by distressing events. It focuses on safety, calm, connection, practical needs, and access to further help rather than forcing people to recount the event.",
+      "accent": "#2A9D72",
+      "theories": [
+        {
+          "name": "Look — Listen — Link",
+          "idea": "A widely used PFA structure: look for safety and urgent needs, listen respectfully to concerns, and link people with information, services, and social support.",
+          "use": "Start with immediate practical needs before attempting deeper emotional discussion."
+        },
+        {
+          "name": "Hobfoll's Five Essential Elements",
+          "idea": "Post-disaster support should promote safety, calming, self- and community efficacy, connectedness, and hope.",
+          "use": "Design support environments and messages around these five protective conditions."
+        },
+        {
+          "name": "Do No Harm",
+          "idea": "Support should respect dignity, culture, privacy, autonomy, and the person's own coping resources.",
+          "use": "Do not pressure someone to talk, diagnose them, make promises you cannot keep, or separate them from natural supports without good reason."
+        }
+      ],
+      "checklist": [
+        "Check immediate safety, medical needs, and basic necessities.",
+        "Introduce yourself and ask what the person needs right now.",
+        "Listen without pressing for details or demanding an emotional account.",
+        "Offer accurate, simple information and practical choices.",
+        "Connect the person with family, community support, or professional services when appropriate."
       ]
     }
   ],
-  "footer": "Built with rumour-response-hub."
+  "principles": [
+    { "title": "Be early", "text": "Silence creates ambiguity. Provide verified updates before speculation becomes the default explanation." },
+    { "title": "Be specific", "text": "State what happened, where, when, what is confirmed, what is unknown, and when the next update will come." },
+    { "title": "Be proportionate", "text": "Respond to observed risk rather than assumptions about a group, crowd, or distressed individual." },
+    { "title": "Protect dignity", "text": "Good incident management reduces harm while preserving trust, autonomy, and humane treatment." }
+  ],
+  "footer": "Educational resource — adapt all operational actions to local law, organisational policy, and professional guidance."
 }
