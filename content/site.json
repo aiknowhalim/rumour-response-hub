@@ -1,0 +1,21 @@
+{
+  "title": "rumour-response-hub",
+  "tagline": "Welcome — this is your new site, ready to be filled with your story.",
+  "sections": [
+    {
+      "heading": "About",
+      "body": "Tell visitors who you are and what you do. Write as many paragraphs as you like — leave a blank line between them and each becomes its own paragraph.\n\nThis starter text is here so the page looks like a real site from the first minute. Replace it with your own words.",
+      "items": []
+    },
+    {
+      "heading": "What you'll find here",
+      "body": "Use sections like this one to introduce your services, your work, or anything you want to highlight.",
+      "items": [
+        "Add a bullet list by filling the \"items\" array",
+        "Add more sections by adding objects to \"sections\"",
+        "Remove a field you don't need — the page adapts"
+      ]
+    }
+  ],
+  "footer": "Built with rumour-response-hub."
+}
