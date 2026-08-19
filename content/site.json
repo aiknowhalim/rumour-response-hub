@@ -1,111 +1,208 @@
 {
-  "title": "Rumour Response Hub",
-  "tagline": "Practical theory for managing misinformation, crowd dynamics, and psychological distress during high-pressure incidents.",
-  "quickActions": [
-    { "label": "Verify a rumour", "target": "rumour-management" },
-    { "label": "Assess crowd dynamics", "target": "crowd-control" },
-    { "label": "Use PFA", "target": "psychological-first-aid" }
+  "title": "Operational Psychology for Police Officers",
+  "tagline": "A presentation-style learning resource on rumour management, crowd psychology, de-escalation, and psychological first aid for frontline and supervisory officers.",
+  "audience": "Police training • frontline response • incident command",
+  "objectives": [
+    "Recognise how ambiguity, emotion, identity and perceived legitimacy shape public behaviour.",
+    "Use evidence-informed communication to reduce rumours and prevent escalation.",
+    "Assess crowds as dynamic social systems rather than assuming irrationality.",
+    "Apply psychological first aid without forcing disclosure or overstepping professional boundaries.",
+    "Translate theory into proportionate, lawful and humane operational decisions."
   ],
   "modules": [
     {
       "id": "rumour-management",
-      "eyebrow": "Module 01",
+      "number": "01",
       "heading": "Rumour Management",
-      "summary": "Rumours grow when information matters to people but reliable facts are missing, delayed, confusing, or distrusted.",
+      "subtitle": "Control the information environment before uncertainty controls the operation.",
       "accent": "#6D5EF6",
+      "whyItMatters": "Rumours can alter crowd behaviour, undermine confidence in police messaging, create secondary incidents, trigger unnecessary movement, and increase hostility toward responders. The operational challenge is not only to identify false information, but to reduce the uncertainty and emotional conditions that allow it to spread.",
       "theories": [
         {
           "name": "Allport & Postman — Basic Law of Rumour",
-          "idea": "Rumour intensity tends to increase when both importance and ambiguity are high: R ≈ i × a.",
-          "use": "Reduce ambiguity quickly with verified facts, clear timestamps, and explicit statements about what is still unknown."
+          "idea": "Rumour intensity tends to rise when an issue is both important and ambiguous. A useful training shorthand is R ≈ importance × ambiguity.",
+          "policeMeaning": "When an incident matters deeply to the public and official information is unclear, rumours become more attractive. Reducing ambiguity can therefore be as important as disproving a false claim.",
+          "application": "Issue early holding statements, separate confirmed facts from unknowns, state when the next update will be provided, and avoid speculative language."
         },
         {
           "name": "Information Vacuum",
-          "idea": "When official information is absent, people fill the gap with peer accounts, assumptions, and emotionally compelling explanations.",
-          "use": "Communicate early, even when the update is simply what is known, unknown, and being checked."
+          "idea": "People fill gaps in official information with peer reports, assumptions, screenshots, fragments of video and emotionally compelling narratives.",
+          "policeMeaning": "Silence is not neutral during a fast-moving incident. It can create space for unofficial explanations to become the accepted story.",
+          "application": "Provide a credible source of truth early. Repeat where the public should look for verified updates and maintain a predictable update rhythm."
         },
         {
           "name": "Inoculation Theory",
-          "idea": "People can become more resistant to misleading claims when warned about likely manipulation techniques before exposure.",
-          "use": "Pre-bunk common false narratives and explain the tactic, not just the specific false claim."
+          "idea": "People can become more resistant to misleading claims when they are warned in advance about likely misinformation techniques.",
+          "policeMeaning": "Pre-bunking may reduce the impact of fabricated screenshots, edited clips, impersonation accounts or claims that exploit known information gaps.",
+          "application": "Explain the manipulation tactic as well as the correction. Example: warn that old footage may be recirculated as if it were current."
+        },
+        {
+          "name": "Trust Heuristic",
+          "idea": "Under pressure, people often judge information partly by whether they trust the messenger rather than by independently checking every fact.",
+          "policeMeaning": "Credibility is an operational asset. Inconsistent statements, visible contradictions or unexplained changes can weaken later messaging.",
+          "application": "Use named spokespersons, consistent language, visible corrections when facts change, and trusted community intermediaries when appropriate."
         }
       ],
-      "checklist": [
-        "Capture the exact claim before responding.",
-        "Separate verified facts, plausible but unverified information, and false information.",
-        "Identify the trusted source best placed to clarify the issue.",
-        "Publish a short correction with evidence and a timestamp.",
-        "Monitor whether the rumour changes form after the correction."
-      ]
+      "decisionPoints": [
+        "What exactly is the claim? Capture it before responding.",
+        "Is it false, unverified, misleading, or merely incomplete?",
+        "Who is most affected by believing it?",
+        "Which trusted voice should correct it?",
+        "What evidence can be shared without compromising operations?",
+        "What is the next likely mutation of the rumour?"
+      ],
+      "scenario": {
+        "title": "Scenario: False report of a second incident",
+        "text": "During a large public event, social media posts claim there has been a second attack two streets away. People begin moving rapidly toward one exit. Officers on the ground have no confirmation of a second incident.",
+        "prompt": "Your task: reduce panic without making claims beyond what is verified.",
+        "response": "A strong response would acknowledge the report, state that police are checking it, direct people to verified channels, give clear movement instructions, and provide another update at a stated time."
+      }
     },
     {
       "id": "crowd-control",
-      "eyebrow": "Module 02",
-      "heading": "Crowd Control & Crowd Psychology",
-      "summary": "Crowds are not automatically irrational. Behaviour is strongly shaped by shared identity, perceived legitimacy, communication, environmental stress, and interactions with authorities.",
+      "number": "02",
+      "heading": "Crowd Psychology & Public Order",
+      "subtitle": "Understand identity, legitimacy, density and communication before choosing intervention.",
       "accent": "#E58B3C",
+      "whyItMatters": "Crowds are not automatically irrational or violent. Behaviour emerges from shared identity, local norms, environmental pressure, perceived threat, policing tactics and the way authorities communicate. Poorly targeted intervention can sometimes unite previously separate groups around a shared grievance.",
       "theories": [
         {
           "name": "Elaborated Social Identity Model (ESIM)",
-          "idea": "Crowd behaviour can change when people come to see themselves as sharing a common identity, especially after experiences viewed as indiscriminate or illegitimate.",
-          "use": "Use differentiated, proportionate responses and communicate why restrictions or directions are necessary."
+          "idea": "Crowd behaviour changes as people interpret who they are, who others are, and whether police action is seen as legitimate or indiscriminate.",
+          "policeMeaning": "If peaceful participants experience police action as unfair or undifferentiated, they may develop a stronger shared identity against police.",
+          "application": "Differentiate behaviour, target intervention narrowly, explain police intentions and preserve lawful participation wherever possible."
         },
         {
           "name": "Emergent Norm Theory",
-          "idea": "In unfamiliar situations, crowds may develop new local norms by observing influential behaviour and interpreting what others appear to accept.",
-          "use": "Make safe behaviour visible, easy, and socially reinforced through stewards, signage, and consistent instructions."
+          "idea": "In uncertain situations, people observe others and infer what behaviour is becoming normal or acceptable.",
+          "policeMeaning": "Visible examples of calm movement, cooperation and compliance can influence the wider crowd, just as visible disorder can spread.",
+          "application": "Use stewards, liaison officers, signage and clearly observable safe routes to make desired behaviour easy to copy."
         },
         {
-          "name": "Deindividuation — Historical Perspective",
-          "idea": "Older theories proposed that anonymity in crowds reduces self-awareness and restraint. Modern research treats this as incomplete and highly context-dependent.",
-          "use": "Do not assume a crowd is inherently dangerous. Assess actual behaviour, identities, pressures, and triggers."
+          "name": "Collective Resilience",
+          "idea": "Crowds can display cooperation, mutual aid and self-organisation, especially when people perceive a shared fate.",
+          "policeMeaning": "Members of the public may become an operational resource rather than simply a control problem.",
+          "application": "Where safe, work with organisers, stewards, community leaders and crowd volunteers to amplify accurate information and safe conduct."
+        },
+        {
+          "name": "Density & Environmental Stress",
+          "idea": "Physical crowding, heat, blocked routes, noise, uncertainty and delay can increase stress and reduce people's ability to process complex instructions.",
+          "policeMeaning": "A communication problem may actually be a space-management problem.",
+          "application": "Monitor bottlenecks, keep exits viable, reduce contradictory instructions, and avoid creating unnecessary compression through barriers or sudden directional changes."
         }
       ],
-      "checklist": [
-        "Observe density, movement, bottlenecks, heat, noise, and visible distress.",
-        "Distinguish peaceful participants from individuals creating immediate risk.",
-        "Use clear instructions, reasons, routes, and realistic timeframes.",
-        "Preserve safe exits and avoid creating unnecessary compression points.",
-        "Escalate interventions only when necessary, proportionate, and lawful."
-      ]
+      "decisionPoints": [
+        "What is the crowd doing, not what do we assume it may do?",
+        "Where are the density risks and escape routes?",
+        "What groups, identities or organisers are present?",
+        "How is police action likely to be interpreted by peaceful participants?",
+        "Can communication, liaison or space management solve the problem before coercive intervention?",
+        "If intervention is necessary, can it be targeted and proportionate?"
+      ],
+      "scenario": {
+        "title": "Scenario: Tension at a cordon",
+        "text": "A peaceful gathering becomes frustrated after an unexplained cordon blocks the route to a transport hub. People begin chanting and pushing forward, while a small number strike the barrier.",
+        "prompt": "Your task: separate crowd frustration from immediate threat and choose the least escalatory effective response.",
+        "response": "A strong response would clarify the reason for the cordon, provide an alternative route and timeframe, engage organisers, identify specific harmful behaviour, and avoid treating the entire crowd as hostile."
+      }
+    },
+    {
+      "id": "de-escalation",
+      "number": "03",
+      "heading": "De-escalation & Communication",
+      "subtitle": "Reduce threat perception, increase clarity, and give people workable choices.",
+      "accent": "#D85B73",
+      "whyItMatters": "De-escalation is not passive. It is an active effort to reduce the conditions that make confrontation more likely: uncertainty, loss of face, perceived disrespect, information overload and lack of alternatives.",
+      "theories": [
+        {
+          "name": "Procedural Justice",
+          "idea": "People are more likely to view authority as legitimate when they experience voice, neutrality, respectful treatment and trustworthy motives.",
+          "policeMeaning": "Even when the outcome cannot change, the way officers explain and deliver it can affect cooperation and future trust.",
+          "application": "Listen briefly, explain the basis for the decision, remain consistent, and communicate with dignity."
+        },
+        {
+          "name": "Threat Perception",
+          "idea": "People under stress may interpret ambiguous actions as more threatening and may process less information.",
+          "policeMeaning": "Rapid commands, crowding, shouting or unexplained physical approach may increase rather than reduce resistance.",
+          "application": "Slow the interaction where circumstances allow, use concise language, avoid unnecessary simultaneous commands, and explain before acting when feasible."
+        },
+        {
+          "name": "Choice Architecture",
+          "idea": "People cooperate more readily when they can see realistic, lawful options instead of experiencing a single unexplained demand.",
+          "policeMeaning": "Giving choices can preserve dignity and reduce the perception of entrapment.",
+          "application": "Offer clear alternatives: where to stand, which route to use, who to speak with, or what action will allow the situation to progress safely."
+        }
+      ],
+      "decisionPoints": [
+        "What does the person believe is happening?",
+        "What threat or loss are they reacting to?",
+        "Have we explained the reason for the instruction?",
+        "Are multiple officers giving conflicting commands?",
+        "Can we offer a safe choice or alternative?",
+        "Is escalation necessary now, or can time and distance improve the situation?"
+      ],
+      "scenario": {
+        "title": "Scenario: Agitated family member",
+        "text": "At a police cordon after a serious collision, a distressed family member repeatedly tries to cross the line and shouts that officers are hiding information.",
+        "prompt": "Your task: maintain the cordon while reducing confrontation.",
+        "response": "A strong response would acknowledge the person's concern, explain the safety reason for the cordon, identify who can provide verified information, move the conversation away from the main flow where possible, and give a concrete next step."
+      }
     },
     {
       "id": "psychological-first-aid",
-      "eyebrow": "Module 03",
+      "number": "04",
       "heading": "Psychological First Aid",
-      "summary": "PFA is humane, practical support for people affected by distressing events. It focuses on safety, calm, connection, practical needs, and access to further help rather than forcing people to recount the event.",
+      "subtitle": "Support safety, calm, connection and practical coping after distressing events.",
       "accent": "#2A9D72",
+      "whyItMatters": "Police officers are often among the first authority figures encountered after traumatic or highly distressing events. Psychological First Aid offers a practical framework for humane support without turning officers into counsellors or forcing people to recount traumatic experiences.",
       "theories": [
         {
           "name": "Look — Listen — Link",
-          "idea": "A widely used PFA structure: look for safety and urgent needs, listen respectfully to concerns, and link people with information, services, and social support.",
-          "use": "Start with immediate practical needs before attempting deeper emotional discussion."
+          "idea": "Look for safety and urgent needs, listen respectfully to concerns, and link people with information, services and social support.",
+          "policeMeaning": "PFA begins with practical reality: Is the person safe? Do they know what is happening? Who can support them next?",
+          "application": "Address immediate needs before asking detailed questions that are not operationally necessary."
         },
         {
           "name": "Hobfoll's Five Essential Elements",
-          "idea": "Post-disaster support should promote safety, calming, self- and community efficacy, connectedness, and hope.",
-          "use": "Design support environments and messages around these five protective conditions."
+          "idea": "Effective post-incident support promotes safety, calming, efficacy, connectedness and hope.",
+          "policeMeaning": "Officers can influence recovery by reducing chaos, giving understandable information, helping people reconnect and restoring a sense of manageable next steps.",
+          "application": "Use simple orientation, realistic reassurance, practical choices and connection to trusted people or services."
         },
         {
           "name": "Do No Harm",
-          "idea": "Support should respect dignity, culture, privacy, autonomy, and the person's own coping resources.",
-          "use": "Do not pressure someone to talk, diagnose them, make promises you cannot keep, or separate them from natural supports without good reason."
+          "idea": "Support should respect dignity, privacy, culture, autonomy and existing coping resources.",
+          "policeMeaning": "Distress is not automatically pathology, and emotional disclosure should not be forced.",
+          "application": "Do not pressure someone to talk, make promises you cannot guarantee, give clinical diagnoses, or separate people from natural supports without cause."
+        },
+        {
+          "name": "Psychological Triage",
+          "idea": "Most distressed people need support and information, while a smaller number may require urgent specialist or medical intervention.",
+          "policeMeaning": "The officer's role is to recognise immediate risk, not to conduct therapy.",
+          "application": "Escalate when there is imminent risk of self-harm, severe disorientation, inability to care for basic safety, medical emergency, or other urgent safeguarding concern."
         }
       ],
-      "checklist": [
-        "Check immediate safety, medical needs, and basic necessities.",
-        "Introduce yourself and ask what the person needs right now.",
-        "Listen without pressing for details or demanding an emotional account.",
-        "Offer accurate, simple information and practical choices.",
-        "Connect the person with family, community support, or professional services when appropriate."
-      ]
+      "decisionPoints": [
+        "Is the person physically safe?",
+        "Do they have urgent medical or safeguarding needs?",
+        "What do they need right now rather than what do we want them to discuss?",
+        "Can they understand the information being given?",
+        "Who can they safely connect with?",
+        "Does their presentation require specialist or medical support?"
+      ],
+      "scenario": {
+        "title": "Scenario: Witness in acute distress",
+        "text": "A witness to a violent incident is shaking, repeatedly asking the same question and saying they cannot think clearly. They are not injured and are not currently required for an urgent evidential account.",
+        "prompt": "Your task: stabilise the situation without forcing disclosure.",
+        "response": "A strong response would move them to a safer quieter area, identify immediate needs, speak calmly, repeat essential information, connect them with a trusted person or support service, and avoid pressing for a detailed account until appropriate."
+      }
     }
   ],
-  "principles": [
-    { "title": "Be early", "text": "Silence creates ambiguity. Provide verified updates before speculation becomes the default explanation." },
-    { "title": "Be specific", "text": "State what happened, where, when, what is confirmed, what is unknown, and when the next update will come." },
-    { "title": "Be proportionate", "text": "Respond to observed risk rather than assumptions about a group, crowd, or distressed individual." },
-    { "title": "Protect dignity", "text": "Good incident management reduces harm while preserving trust, autonomy, and humane treatment." }
+  "commandModel": [
+    {"step":"1","title":"Observe","text":"What is actually happening? Separate evidence from assumption."},
+    {"step":"2","title":"Interpret","text":"What psychological or social processes may be shaping behaviour?"},
+    {"step":"3","title":"Communicate","text":"What information, explanation or reassurance is missing?"},
+    {"step":"4","title":"Act proportionately","text":"Choose the least harmful effective response consistent with law, policy and safety."},
+    {"step":"5","title":"Reassess","text":"Did the intervention reduce risk, or did it create new tension, rumours or distress?"}
   ],
-  "footer": "Educational resource — adapt all operational actions to local law, organisational policy, and professional guidance."
+  "footer": "Training resource only. Operational decisions must follow local law, force policy, command direction, safeguarding requirements and professional judgement."
 }
